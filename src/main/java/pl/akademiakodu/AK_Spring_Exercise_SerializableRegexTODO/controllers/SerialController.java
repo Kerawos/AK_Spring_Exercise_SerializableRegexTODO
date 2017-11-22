@@ -3,7 +3,7 @@ package pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import pl.akademiakodu.AK_Spring_Exercise_SerializableRegex.models.SerializationExercise;
+import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.SerializationExercise;
 
 import java.io.File;
 

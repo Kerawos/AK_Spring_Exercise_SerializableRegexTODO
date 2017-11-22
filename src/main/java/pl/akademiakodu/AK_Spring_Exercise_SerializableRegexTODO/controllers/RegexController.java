@@ -5,9 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import pl.akademiakodu.AK_Spring_Exercise_SerializableRegex.models.RegexExercise;
-import pl.akademiakodu.AK_Spring_Exercise_SerializableRegex.models.SerializationExercise;
-import pl.akademiakodu.AK_Spring_Exercise_SerializableRegex.models.UserRegisterInput;
+import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.RegexExercise;
+import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.SerializationExercise;
+import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.UserRegisterInput;
 
 import java.io.File;
 
