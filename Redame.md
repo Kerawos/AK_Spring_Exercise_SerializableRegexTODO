@@ -23,7 +23,7 @@ for validation tests, there you find more instructions.
 
 second part of the exercise is to implement two methods:
 
-- saveObject - save object to file - write;
+- saveObject - save object to file - write(*remember to make user password unreadable after loading);
 
 - loadObject - load object from file - read;
 
