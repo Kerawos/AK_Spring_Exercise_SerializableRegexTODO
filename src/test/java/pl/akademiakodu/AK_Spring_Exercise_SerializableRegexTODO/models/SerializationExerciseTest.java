@@ -3,6 +3,7 @@ package pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.services.SerializationExercise;
 
 import java.io.File;
 

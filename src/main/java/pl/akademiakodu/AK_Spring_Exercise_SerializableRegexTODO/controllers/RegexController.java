@@ -1,28 +1,47 @@
 package pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.RegexExercise;
-import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.SerializationExercise;
+import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.services.RegexExercise;
 import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.UserRegisterInput;
 
 import java.io.File;
 
+/**
+ * Control regex page with exercise
+ */
 @Controller
 public class RegexController {
 
-    private RegexExercise regexExercise = new RegexExercise();
-    private File file = new File("fileTest.txt");
-    private SerializationExercise serializationExercise = new SerializationExercise();
+    /**
+     * Services and variables declaration
+     */
+    @Autowired
+    private RegexExercise regexExercise;
 
+    private File file = new File("fileTest.txt");
+
+    /**
+     * Method responsible for loading requested regex template also with inputs to fulfill by user and store with
+     * given model variable
+     * @param model stored user inputs
+     * @return ready regex template
+     */
     @GetMapping("/reg") public String regexGet(Model model){
         model.addAttribute("userRegisterInput", new UserRegisterInput());
         return "regex";
     }
 
+    /**
+     * Method responsible to manage regex service logic
+     * @param userRegisterInput stored user variable
+     * @param model holding calculations
+     * @return regex template with results
+     */
     @PostMapping("/reg") public String regexPost(@ModelAttribute("userRegisterInput") UserRegisterInput userRegisterInput, Model model){
         if (!regexExercise.isProperName(userRegisterInput.getName())){
             model.addAttribute("infoName", "Name have to start from Capital letter without any special characters");

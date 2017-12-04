@@ -1,4 +1,6 @@
-package pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models;
+package pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.services;
+
+import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.UserRegisterInput;
 
 import java.io.*;
 

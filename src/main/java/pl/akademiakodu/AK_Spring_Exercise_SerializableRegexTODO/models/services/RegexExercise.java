@@ -1,4 +1,4 @@
-package pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models;
+package pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.services;
 
 public class RegexExercise {
 
