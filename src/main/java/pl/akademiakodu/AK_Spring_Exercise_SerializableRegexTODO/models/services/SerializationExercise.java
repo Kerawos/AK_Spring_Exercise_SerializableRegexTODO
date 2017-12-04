@@ -33,5 +33,5 @@ public class SerializationExercise {
         //todo load object from file
         return new UserRegisterInput();
     }
-    
+
 }

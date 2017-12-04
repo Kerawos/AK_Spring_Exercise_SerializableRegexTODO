@@ -10,6 +10,9 @@ import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.services.
 
 import static org.junit.Assert.*;
 
+/**
+ * Class responsible for testing regex exercise service logic
+ */
 public class RegexExerciseTest {
 
     private static RegexExercise regexExercise;
@@ -22,6 +25,10 @@ public class RegexExerciseTest {
         regexExercise = null;
     }
 
+    /**
+     * Method test email validation
+     * @throws Exception in case of wrong user inputs
+     */
     @Test public void emailValidationText() throws Exception {
         assertTrue(regexExercise.isEmailAddress("example@gmail.com"));
         assertTrue(regexExercise.isEmailAddress("Maresowa@gmail.com"));
@@ -41,6 +48,10 @@ public class RegexExerciseTest {
         assertFalse(regexExercise.isEmailAddress("example@!com.pl"));
     }
 
+    /**
+     * Method test password validation
+     * @throws Exception in case of wrong user inputs
+     */
     @Test public void passwordStrengthTest() throws Exception {
         assertTrue(regexExercise.isPasswordSecure("pAsswoRd1#"));
         assertTrue(regexExercise.isPasswordSecure("Omomom1.2.3.4.5$omomom"));
@@ -55,6 +66,10 @@ public class RegexExerciseTest {
         assertFalse(regexExercise.isPasswordSecure("29.02.1919"));
     }
 
+    /**
+     * Method test street name validation
+     * @throws Exception in case of wrong user inputs
+     */
     @Test public void streetTest() throws Exception {
         assertTrue(regexExercise.isStreetCorrected("Krakowska 1/2"));
         assertTrue(regexExercise.isStreetCorrected("Krakowska 2"));
@@ -68,6 +83,10 @@ public class RegexExerciseTest {
         assertFalse(regexExercise.isStreetCorrected("Ulica jakas tam..."));
     }
 
+    /**
+     * Method test name validation
+     * @throws Exception in case of wrong user inputs
+     */
     @Test public void nameValidator() throws Exception {
         assertTrue(regexExercise.isProperName("Jan"));
         assertTrue(regexExercise.isProperName("Anna"));
@@ -77,6 +96,10 @@ public class RegexExerciseTest {
         assertFalse(regexExercise.isProperName("Ann@na"));
     }
 
+    /**
+     * Method test surname validation
+     * @throws Exception in case of wrong user inputs
+     */
     @Test public void fullNameValidator() throws Exception {
         assertTrue(regexExercise.isProperSurname("Kowalski"));
         assertTrue(regexExercise.isProperSurname("Kowalski-Nowak"));

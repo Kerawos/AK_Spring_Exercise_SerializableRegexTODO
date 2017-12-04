@@ -12,6 +12,9 @@ import java.io.File;
 
 import static org.junit.Assert.*;
 
+/**
+ * Class responsible for testing serialization exercise logic
+ */
 public class SerializationExerciseTest {
 
     private static SerializationExercise serializationExercise;
@@ -24,6 +27,10 @@ public class SerializationExerciseTest {
         serializationExercise = null;
     }
 
+    /**
+     * Method testing saving object into file
+     * @throws Exception
+     */
     @Test public void saveTest() throws Exception {
         File file = new File("fileTest.txt");
         UserRegisterInput user1 = new UserRegisterInput("Jan", "Kowalski", "jankowal@mail.com", "Centrum 2", "SecretPassword123!!!");
