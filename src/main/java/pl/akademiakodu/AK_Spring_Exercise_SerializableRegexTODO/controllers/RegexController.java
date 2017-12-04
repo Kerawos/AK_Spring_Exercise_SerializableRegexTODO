@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.services.RegexExercise;
 import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.UserRegisterInput;
+import pl.akademiakodu.AK_Spring_Exercise_SerializableRegexTODO.models.services.SerializationExercise;
 
 import java.io.File;
 
@@ -20,9 +21,8 @@ public class RegexController {
     /**
      * Services and variables declaration
      */
-    @Autowired
-    private RegexExercise regexExercise;
-
+    @Autowired private RegexExercise regexExercise;
+    @Autowired private SerializationExercise serializationExercise;
     private File file = new File("fileTest.txt");
 
     /**
